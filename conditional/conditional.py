@@ -11,8 +11,12 @@ def days_to_unit(number_of_days):
         return "You have entered a negative number, so it cannot be converted"
 
 try:
-    user_input = int(input("Enter number of days you want to calculate: "))
-    calculated_value = days_to_unit(user_input)
-    print(calculated_value)
+    user_input = input("Enter number of days you want to calculate: ")
+    if(user_input.isdigit()):
+        user_input_number= int(user_input)
+        calculated_value = days_to_unit(user_input)
+        print(calculated_value)
+    else:
+        print("Please enter a number")
 except ValueError:
     print("Invalid input. Please enter a valid integer.")
